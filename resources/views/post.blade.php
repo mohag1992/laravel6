@@ -81,6 +81,14 @@
                   @csrf
                   @method('PUT')
 
+                  <div class="control">
+                    <input class="input @error('title') 'is-danger' @enderror" type="text" name="text">
+
+                    @error('title')
+                    <p class="help is-danger">{{ $errors->first('title')}}</p>
+                    @enderror
+                </form>
+
 
                {{ $post }}
             </div>
