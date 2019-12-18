@@ -82,7 +82,8 @@
                   @method('PUT')
 
                   <div class="control">
-                    <input class="input @error('title') 'is-danger' @enderror" type="text" name="text">
+                    <input class="input @error('title') 'is-danger' @enderror" type="text" name="text"
+                    value="{{ old('title')}}">
 
                     @error('title')
                     <p class="help is-danger">{{ $errors->first('title')}}</p>
