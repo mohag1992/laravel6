@@ -64,11 +64,23 @@
         </style>
     </head>
     <body>
+      <div id="header-wrapper">
+           <div id="menu">
+             <ul>
+               <li class="{{ Request :: path() === '/'? 'current_page_item' : ''}}">
+                 <a href="">
+                 </a>
+               </li>
 
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
                 </div>
+
+                <form method="POST" action="/articles">
+                  @csrf
+                  @method('PUT')
+
 
                {{ $post }}
             </div>
